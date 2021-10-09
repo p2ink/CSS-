@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高的继承性</title>
+    <style>
+        body {
+            font: 12px/1.5 kaiti;
+            color: pink;
+        }
+
+        div {
+            /* 子元素继承了父元素 body 行高的1.5 */
+            /* 这个1.5就是当前元素文字大小 font-size 的1.5倍 所以当前div文字的行高为21像素 */
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* li没有手动指定元素文字大小 则会继承父亲的文字大小 body 12px 所以li 文字大小为12px */
+    </style>
+</head>
+
+<body>
+    <div>粉红色的回忆</div>
+    <p>粉红色的回忆</p>
+    <ul>
+        <li>我没有指定文字大小</li>
+    </ul>
+</body>
+
+</html>
